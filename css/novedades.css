@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu&display=swap');
+:root{
+    --primary: #42b983;
+    --secondary:#2e4469;
+    --background: #35495e;
+    --black-text: rgba(61,61,61);
+    --white-text: white;
+    --button-hover: #38755a;
+}
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+nav{
+    background-color: var(--primary);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header h1{
+    color: var(--white-text);
+    font-size: 2rem;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    border-right: solid .1rem rgba(61, 61, 61, 0.41);
+}
+nav ul li:last-child{
+    border-right: none;
+}
+nav ul li a{
+    color: var(--white-text);
+    font-size: 1.2rem;
+    padding: .8rem 1rem;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    background-color: var(--background);
+    transition: all .3s;
+}
+.drawer{
+    color: var(--white-text);
+    float: left;
+    cursor: pointer;
+    display: none;
+    margin-left: 1rem;
+    border:solid .1rem var(--white-text);
+    padding: .2rem;
+    border-radius: .1rem;
+
+}
+#ckbox{
+    display: none;
+}
+.contenedor p{
+    padding-top: 0.5rem;
+    margin: 5rem;
+    text-align: left;
+    text-align: justify;
+}
+main{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main h1{
+    font-size: 3rem;
+    color: var(--black-text);
+    text-align: center;
+    margin: 1rem;
+}
+main h2{
+    font-size: 3rem;
+    padding-top: 3rem;
+    color: var(--black-text);
+    text-align: center;
+    margin: 1rem;
+}
+main p{
+    flex: 1 1 30rem;
+    background: white;
+    border-radius: .5rem;
+    border:  .1rem solid rgb(0, 0, 0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    text-align: justify;
+    transition: .2s linear;
+    font-size: 2em;
+}
