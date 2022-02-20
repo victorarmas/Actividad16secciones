@@ -49,6 +49,18 @@ nav ul li a:hover{
     background-color: var(--background);
     transition: all .3s;
 }
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
 .drawer{
     color: var(--white-text);
     float: left;
@@ -60,9 +72,7 @@ nav ul li a:hover{
     border-radius: .1rem;
 
 }
-#ckbox{
-    display: none;
-}
+
 
 main{
     padding-top: 1rem;
@@ -91,21 +101,6 @@ main p{
     margin: 1rem 0;
 }
 
-
-.primary-btn{
-    background-color: var(--primary);
-    color: var(--white-text);
-    border-style:none ;
-    border: solid .1rem var(--primary);
-}
-.primary-btn:hover{
-    background-color: var(--white-text);
-    color: var(--primary);
-    border: solid .1rem var(--primary);
-    transition: all .3s;
-}
-
-
 #footer{
     width: 100%;
     height: 85px;
@@ -114,42 +109,122 @@ main p{
     color: white;
     padding-top: 1%;
     }
-@media(max-width:1020px){
-    nav{
-        justify-content: flex-start;
+@media(max-width:1200px){
+    header h1{
+        padding-left:20px ;
     }
-
-    .drawer{
+    main{
+        background-size: 50%;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+}
+@media(max-width:768px){
+    .checkbtn{
         display: block;
     }
-    nav h1{
-        margin-left: 1rem;
+
+    header label{
+        display: block;
+    }
+    main .image2{
+        width: 50%;
+    }
+    main .contenedor h1,p{
+
+font-size:170%;
     }
     ul{
         position: fixed;
-        width: 50%;
-        height: 100vh;
-        background-color: var(--background);
-        top: 10vh;
-        left: 100%;
-        text-align: left;
-        transition: all -5s;
-        display: flex;
         flex-direction: column;
-        align-content: stretch;
+        width: 100%;
+        height: 100vh;
+        background: #38755a;
+        top: 80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
     }
     nav ul li{
-        padding: 1rem 0;
-        display: flex;
-        flex-direction: column;
-        padding-left: 2rem;
-        border-bottom: solid .1rem rgba(201,196,196,0.4);
+        display: block;
+        margin: 50px 0;
+        line-height: 20px;
     }
-    #ckbox:checked~.menu.box{
-        left: 0;
-
+    nav ul li a{
+        font-size: 20px;
     }
-    .image{
-        display: none;
+    li a:hover, li a.active{
+        background: none;
+        color: #42b983;
     }
+    #check:checked~ul{
+        left:0;
+        margin: 0;
+    }
+    .main{
+       background: #35495e;
+    }
+    
 }
+@media(max-width:600px){
+    .checkbtn{
+        display: block;
+    }
+
+    header label{
+        display: block;
+    }
+    main .image2{
+        width: 50%;
+    }
+    main .contenedor h1,p{
+
+    font-size:120%;
+    }
+    ul{
+        position: fixed;
+        flex-direction: column;
+        width: 30%;
+        height: 100vh;
+        background: #38755a;
+        top: 67px;
+        left:-30%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav{
+        background-color: var(--primary);
+    height: 10vh;
+    width: 120%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 20px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: #42b983;
+    }
+    #check:checked~ul{
+        left:0;
+        margin: 0;
+    }
+    #footer{
+        width: 120%;
+        height: 300px;
+        background: var(--primary);
+        text-align: center;
+        color: white;
+        padding-top: 1%;
+        }
+    
+}
+
